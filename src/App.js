@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route,Router, Switch } from "react-router-dom";
 import history from './history';
 import { LoginPage } from "./component/LoginPage";
 import { HomePage } from "./component/HomePage";
@@ -11,8 +11,10 @@ import { HR } from "./component/HR_Page";
 import { PersonalDetails } from './component/ListofPersonalDetails';
 import { Create_PersonalDetails } from "./component/CreatePersonalDetails";
 import { Personal_Details } from "./component/PersonalDetails"
-import { EditPersonalDetails } from "./component/EditPersonalDetails";
+import {EditPersonalDetails} from "./component/EditPersonalDetails";
+import {LeavePolicy} from "./component/LeavePolicy";
 import './App.css'
+import { from } from '@apollo/client';
 function App() {
   return (
 
@@ -28,7 +30,8 @@ function App() {
         <Route exact path="/personal" component={PersonalDetails} />
         <Route exact path="/createpresonal" component={Create_PersonalDetails} />
         <Route exact path="/pd/:id/" component={Personal_Details} />
-        <Route exact path="/editpd/:id/" component={EditPersonalDetails} />
+        <Route exact path="/editpersonal/:id" component={EditPersonalDetails}/>
+        <Route exact path="/leavepolicy" component={LeavePolicy}></Route>
       </Switch>
     </Router>
   );

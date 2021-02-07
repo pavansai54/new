@@ -65,7 +65,10 @@ export const HR = () => {
             <Table>
                 <TableRow>
                     <TableRow><TableData>LEAVE MANAGEMENT</TableData></TableRow>
-                    <TableRow><TableData> LEAVE POLICY</TableData></TableRow>
+                    <TableRow><TableData> 
+                    <LinkTag to={"/leavepolicy"}>
+                        LEAVE POLICY
+                        </LinkTag></TableData></TableRow>
                     <TableRow><TableData>
                         <LinkTag to={"/personal"}>
                             PERSONAL DETAILS

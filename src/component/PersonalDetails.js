@@ -84,7 +84,7 @@ export const Personal_Details = () => {
 
     const DisplayPD =gql`
     query PDDisplay($id:String!){
-        personaldetalis(id:$id){
+        personal(id:$id){
             name
             code
             email
@@ -100,14 +100,14 @@ export const Personal_Details = () => {
 
     if (loading) return <p>Loading....</p>
     if (error) return <p>ERROR....</p>
-    if (data && data.personaldetalis) {
-        personState.name = data.personaldetalis.name;
-        personState.code = data.personaldetalis.code;
-        personState.email = data.personaldetalis.email;
-        personState.role = data.personaldetalis.role;
-        personState.pan_No = data.personaldetalis.pan_No;
-        personState.account_No = data.personaldetalis.account_No;
-        personState.ifsc_code = data.personaldetalis.ifsc_code;
+    if (data && data.personal) {
+        personState.name = data.personal.name;
+        personState.code = data.personal.code;
+        personState.email = data.personal.email;
+        personState.role = data.personal.role;
+        personState.pan_No = data.personal.pan_No;
+        personState.account_No = data.personal.account_No;
+        personState.ifsc_code = data.personal.ifsc_code;
     }
 
     return (
