@@ -1,4 +1,4 @@
-import React, { Component, Fragment, useState } from 'react'
+import React, {  Fragment, useState } from 'react'
 import Styled from '@emotion/styled';
 import { Link, useParams } from 'react-router-dom';
 import { useMutation, gql, useQuery } from '@apollo/client';
@@ -10,10 +10,7 @@ padding:8px;
 color:${(props) => props.color};
 font-size:25px;
 `;
-const Logo = Styled.img`
-height:20px;
-width:20px
-`;
+
 const Lable = Styled.label`
 font-size:20px;
 `;
@@ -54,8 +51,7 @@ padding:20px;
 `;
 const Table = Styled.table`
 `;
-const TableData = Styled.td`
-`;
+
 const TableRow = Styled.tr`
 `;
 const TableColumn = Styled.td`

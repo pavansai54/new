@@ -1,8 +1,10 @@
-import React, { Component, Fragment, useState } from 'react'
+import React, {  Fragment, useState } from 'react'
 
 import Styled from '@emotion/styled';
 import { Link, useParams } from 'react-router-dom';
 import { useMutation, gql, useQuery } from '@apollo/client';
+
+
 const Navbar = Styled.nav`
 background-color: ${(props) => props.bgColor};
 position: sticky;
@@ -10,10 +12,6 @@ top:0px;
 padding:8px;
 color:${(props) => props.color};
 font-size:25px;
-`;
-const Logo = Styled.img`
-height:20px;
-width:20px
 `;
 const Lable = Styled.label`
 font-size:20px;
@@ -54,8 +52,6 @@ align-items: center;
 padding:20px;
 `;
 const Table = Styled.table`
-`;
-const TableData = Styled.td`
 `;
 const TableRow = Styled.tr`
 `;
@@ -98,7 +94,7 @@ export const EditEmployee = () => {
 
     const EmployeeEdit = gql`
      mutation UpdateEmployee($id: String!){
-         updateEmployee(id:$id,data: {
+         updateEmployee(id: $id,data: {
               name:"${empState.username}",
               code:"${empState.code}",
               email:"${empState.email}",
@@ -182,6 +178,8 @@ export const EditEmployee = () => {
                             <Option disabled selected value> Select an Option</Option>
                             <Option value="ADMIN"> ADMIN </Option>
                             <Option value="SUPER ADMIN"> SUPER ADMIN </Option>
+                            <Option value="DEVOPS"> DEVOPS</Option>
+                            <Option value="QA-ENGINEER"> QA-ENGINEER</Option>
                             <Option value="ACCOUNTANT"> ACCOUNTANT </Option>
                             <Option value="SOFTWARE ENGINEER"> SOFTWARE ENGINEER </Option>
                             <Option value="SENIOR-SOFTWARE ENGINEER"> SENIOR-SOFTWARE ENGINEER </Option>

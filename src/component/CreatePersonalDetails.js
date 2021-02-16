@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import Styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-import { useMutation, gql, useQuery } from '@apollo/client';
+import { useMutation, gql } from '@apollo/client';
 const Navbar = Styled.nav`
 background-color: ${(props) => props.bgColor};
 position: sticky;
@@ -9,10 +9,6 @@ top:0px;
 padding:8px;
 color:${(props) => props.color};
 font-size:25px;
-`;
-const Logo = Styled.img`
-height:20px;
-width:20px
 `;
 const Lable = Styled.label`
 font-size:20px;
@@ -54,8 +50,6 @@ padding:20px;
 `;
 const Table = Styled.table`
 `;
-const TableData = Styled.td`
-`;
 const TableRow = Styled.tr`
 `;
 const TableColumn = Styled.td`
@@ -92,7 +86,7 @@ export const Create_PersonalDetails=()=>{
                   }
               }
           `;
-    const [PDCreate, { loading, error, data }] = useMutation(Personal);
+    const [PDCreate, { loading, error }] = useMutation(Personal);
     if (loading) return <p>Loading ...</p>;
     if (error) return <p>Error</p>;
 

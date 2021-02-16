@@ -1,9 +1,7 @@
-import React, { Component, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import Styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-import { useQuery, gql, useMutation } from '@apollo/client';
 import './images/mobile_black.png';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = Styled.nav`
@@ -18,11 +16,6 @@ text-align:${(props) => props.text};
 const LinkTag = Styled(Link)`
 color:black;
 text-decoration:none;
-`;
-const Logo = Styled.img`
-height: 30px;
-width: 30px;
-margin-bottom:-5px;
 `;
 const Table = Styled.table`
 border-collapse: collapse;
@@ -42,21 +35,6 @@ const TableRow = Styled.tr`
 border: 3px solid #ddd;
  &:nth-child(even){background-color: #F2F2F2;}
 `;
-const Button = Styled.button`
-color:black;
-background-color: ${props =>
-        props.save ? 'powderblue' : 'white'};
-height:30px;
-font-size:20px;
-width:80px;
-border-radius:5px;
-&:hover {
-opacity:0.5;
-`;
-    // window.onpopstate= function()
-    // {
-    //     alert("Are you sure want to leave this page");
-    // }
     
 export const HomePage = () => {
 

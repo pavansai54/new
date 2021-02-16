@@ -1,9 +1,9 @@
-import React, { Component, Fragment, useState, } from 'react';
+import React, { Fragment, useState, } from 'react';
 import Styled from '@emotion/styled';
-import { Link, useParams, useHistory } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useQuery, gql, useMutation } from '@apollo/client';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit, faTrash, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = Styled.nav`
 background-color: ${(props) => props.bgColor};
@@ -12,11 +12,6 @@ top: 0px;
 padding: 8px;
 color: ${(props) => props.color};
 font-size: 20px;
-`;
-const Logo = Styled.img`
-height: 30px;
-width: 30px;
-margin-bottom: -5px;
 `;
 const Break = Styled.br`
 `;
@@ -63,17 +58,6 @@ height: 10px;
 padding:8px;
 text-align:left;
 `;
-const Actionbutton = Styled.button`
-height:15px;
-width:15px;
-display:inline-block;
-background-color:rgba(255,255,255,0.7);
-border:1px solid gray;
-`;
-const IdButton = Styled.button`
-border:none;
-outline:none;
-    `;
 const LinkTag = Styled(Link)`
 color:black;
 text-decoration:none;
@@ -93,7 +77,7 @@ font-size:15px;
 
 export const ListOfEmployee = () => {
 
-    const { id } = useParams();
+    const { id} = useParams();
 
     const Show = gql`
 {

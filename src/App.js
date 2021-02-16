@@ -13,7 +13,7 @@ import { Create_PersonalDetails } from "./component/CreatePersonalDetails";
 import { Personal_Details } from "./component/PersonalDetails"
 import {EditPersonalDetails} from "./component/EditPersonalDetails";
 import './App.css'
-import { from } from '@apollo/client';
+
 function App() {
   return (
 
