@@ -12,7 +12,6 @@ import { PersonalDetails } from './component/ListofPersonalDetails';
 import { Create_PersonalDetails } from "./component/CreatePersonalDetails";
 import { Personal_Details } from "./component/PersonalDetails"
 import {EditPersonalDetails} from "./component/EditPersonalDetails";
-import {LeavePolicy} from "./component/LeavePolicy";
 import './App.css'
 import { from } from '@apollo/client';
 function App() {
@@ -31,7 +30,6 @@ function App() {
         <Route exact path="/createpresonal" component={Create_PersonalDetails} />
         <Route exact path="/pd/:id/" component={Personal_Details} />
         <Route exact path="/editpersonal/:id" component={EditPersonalDetails}/>
-        <Route exact path="/leavepolicy" component={LeavePolicy}></Route>
       </Switch>
     </Router>
   );

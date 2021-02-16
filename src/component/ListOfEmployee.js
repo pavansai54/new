@@ -165,13 +165,13 @@ export const ListOfEmployee = () => {
 
                     {data.employeeList.map((employee, id) => (
                         <TableRow>
-                            <a href="">
+                            {/* <a href=""> */}
                                 <LinkTag to={`/display/${employee.id}`}>
                                     <Hover>
                                         <TableData key={id}>{employee.code}</TableData>
                                     </Hover>
                                 </LinkTag>
-                            </a>
+                            {/* </a> */}
                             <TableData>{employee.name}</TableData>
                             <TableData>{employee.email}</TableData>
                             <TableData>{employee.role}</TableData>
